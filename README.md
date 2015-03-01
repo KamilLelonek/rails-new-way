@@ -1,5 +1,7 @@
 # rails-new-way
 
+To see the domain desciprtion check [DOMAIN.md](DOMAIN.md)
+
 ## Setup
 
 To start development, setup local database first:
