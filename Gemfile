@@ -1,28 +1,33 @@
 source 'https://rubygems.org'
 
+ruby '2.2.0'
 
 gem 'rails', '4.2.0'
-
 gem 'rails-api'
+gem 'puma'
+gem 'rack-cors'
+gem 'figaro'
+gem 'pg'
+gem 'virtus'
+gem 'solid_use_case'
+gem 'reform'
+gem 'dependor', require: %w(dependor dependor/shorty)
 
-gem 'spring', :group => :development
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+end
 
-
-gem 'sqlite3'
-
-
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano', :group => :development
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+group :tests do
+  gem 'rspec-rails'
+  gem 'json_spec'
+  gem 'webmock'
+  gem 'ffaker'
+  gem 'rspec-collection_matchers'
+  gem 'activerecord-nulldb-adapter'
+  gem 'spring-commands-rspec'
+  gem 'pry-rescue'
+  gem 'pry-stack_explorer'
+end
