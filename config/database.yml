@@ -1,16 +1,12 @@
 default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
+  adapter:  postgresql
+  encoding: unicode
+  pool:     5
 
 development:
   <<: *default
-  database: db/development.sqlite3
-
-test:
-  <<: *default
-  database: db/test.sqlite3
+  database: rails_new_way_development
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: rails_new_way_production
