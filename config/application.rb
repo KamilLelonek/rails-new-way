@@ -14,6 +14,8 @@ module RailsNewWay
     config.middleware.delete Rack::Lock
     config.middleware.delete ActionDispatch::RequestId
 
+    config.autoload_paths += %W(#{config.root}/app)
+
     config.middleware.insert_before 0, 'Rack::Cors' do
       allow do
         origins '*'
