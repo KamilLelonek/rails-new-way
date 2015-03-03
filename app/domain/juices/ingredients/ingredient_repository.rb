@@ -1,14 +1,13 @@
+require_relative '../../common/repository'
+
 module Juices
   module Ingredients
     class IngredientRepository
+      include ::Repository
+
       def initialize(adapter = Ingredient)
-        @adapter = adapter
+        super
       end
-
-      delegate :hello, :all, to: :adapter
-
-      private
-      attr_reader :adapter
     end
   end
 end

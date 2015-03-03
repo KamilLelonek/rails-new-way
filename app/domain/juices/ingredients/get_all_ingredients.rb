@@ -1,16 +1,13 @@
+require_relative '../../common/query'
+
 module Juices
   module Ingredients
     class GetAllIngredients
+      include ::Query
+
       def initialize(repository = IngredientRepository.new)
-        @repository = repository
+        super
       end
-
-      def call
-        repository.all
-      end
-
-      private
-      attr_reader :repository
     end
   end
 end
