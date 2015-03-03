@@ -23,10 +23,8 @@ end
 group :tests do
   gem 'rspec-rails'
   gem 'json_spec'
-  gem 'webmock'
   gem 'ffaker'
   gem 'rspec-collection_matchers'
-  gem 'activerecord-nulldb-adapter'
   gem 'spring-commands-rspec'
   gem 'pry-rescue'
   gem 'pry-stack_explorer'

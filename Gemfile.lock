@@ -30,15 +30,12 @@ GEM
       activemodel (= 4.2.0)
       activesupport (= 4.2.0)
       arel (~> 6.0)
-    activerecord-nulldb-adapter (0.3.1)
-      activerecord (>= 2.0.0)
     activesupport (4.2.0)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.3.7)
     arel (6.0.0)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -59,8 +56,6 @@ GEM
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     columnize (0.9.0)
-    crack (0.4.2)
-      safe_yaml (~> 1.0.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     dependor (1.0.1)
@@ -179,7 +174,6 @@ GEM
       rspec-mocks (~> 3.2.0)
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
-    safe_yaml (1.0.4)
     slop (3.6.0)
     solid_use_case (2.1.1)
       deterministic (~> 0.6.0)
@@ -206,15 +200,11 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
-    webmock (1.20.4)
-      addressable (>= 2.3.6)
-      crack (>= 0.3.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-nulldb-adapter
   better_errors
   binding_of_caller
   dependor
@@ -236,4 +226,3 @@ DEPENDENCIES
   solid_use_case
   spring-commands-rspec
   virtus
-  webmock
