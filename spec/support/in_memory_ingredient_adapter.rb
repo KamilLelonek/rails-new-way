@@ -1,0 +1,1 @@
+InMemoryIngredientAdapter = Class.new(InMemoryAdapter)
