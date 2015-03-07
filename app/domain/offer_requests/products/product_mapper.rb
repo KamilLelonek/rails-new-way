@@ -5,13 +5,13 @@ module OfferRequests
     class ProductMapper
       def call(record)
         Products::ProductEntity.new(
-          id:             record.id,
-          quantity:       record.quantity,
-          juice_category: map_juice_category(record),
+          id:       record.id,
+          quantity: record.quantity,
+          category: map_category(record),
         )
       end
 
-      def map_juice_category(record)
+      def map_category(record)
         Juices::Categories::CategoryMapper.new.(record.category)
       end
     end

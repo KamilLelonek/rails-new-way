@@ -52,20 +52,12 @@ RSpec.describe UseCases::MakeOfferRequest do
         :delivery_id
       )
       expect_to_have_invalid(
-        valid_params.merge(delivery_period: 500),
-        :delivery_period
-      )
-      expect_to_have_invalid(
         valid_params.merge(customer_email: 'example.com'),
         :customer_email
       )
       expect_to_have_invalid(
         valid_params.merge(company_phone: '+4 403 432'),
         :company_phone
-      )
-      expect_to_have_invalid(
-        valid_params.merge(cvr: 123456),
-        :cvr
       )
       expect_to_have_invalid(
         valid_params.merge(products: [{ quantity: 0, category_id: 0 }]),

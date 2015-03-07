@@ -5,14 +5,14 @@ module OfferRequests
     class ProductEntity
       include ::Virtus.model
 
-      attribute :id, String
-      attribute :category_id,    String, default: :default_category_id
-      attribute :juice_category, Juices::Categories::CategoryEntity
-      attribute :quantity,       Integer
+      attribute :id,          String
+      attribute :category_id, String, default: :default_category_id
+      attribute :category,    Juices::Categories::CategoryEntity
+      attribute :quantity,    Integer
 
       private
       def default_category_id
-        juice_category.id if juice_category.present?
+        category.id if category.present?
       end
     end
   end

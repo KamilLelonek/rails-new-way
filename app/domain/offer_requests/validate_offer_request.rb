@@ -25,7 +25,7 @@ module OfferRequests
     end
 
     def validate_products_categories(offer_request_form_object)
-      raise InvalidOfferRequest.new :invalid_attributes, errors: { juice_category_id: 'category does not exist' } unless all_products_valid(offer_request_form_object)
+      raise InvalidOfferRequest.new :invalid_attributes, errors: { category_id: 'category does not exist' } unless all_products_valid(offer_request_form_object)
     end
 
     def all_products_valid(offer_request_form_object)
