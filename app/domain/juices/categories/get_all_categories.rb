@@ -5,7 +5,7 @@ module Juices
     class GetAllCategories
       include Common::Query
 
-      def initialize(repository = CategoryRepository.new)
+      def initialize(repository = CategoryRepository.new, mapper = CategoryMapper.new)
         super
       end
     end

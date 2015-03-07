@@ -2,7 +2,7 @@ module Juices
   module Categories
     class CategoriesController < ApplicationController
       def index
-        render json: get_all_categories.()
+        render json: get_all_categories.load_all
       end
 
       private

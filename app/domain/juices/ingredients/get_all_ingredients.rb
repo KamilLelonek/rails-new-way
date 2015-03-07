@@ -5,7 +5,7 @@ module Juices
     class GetAllIngredients
       include Common::Query
 
-      def initialize(repository = IngredientRepository.new)
+      def initialize(repository = IngredientRepository.new, mapper = IngredientMapper.new)
         super
       end
     end
