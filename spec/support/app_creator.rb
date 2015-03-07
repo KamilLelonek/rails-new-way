@@ -31,7 +31,7 @@ class AppCreator
   end
 
   def initialize_offer_requests
-    @offer_request_in_memory_adapter            = InMemoryAdapter.new
+    @offer_request_in_memory_adapter            = OfferRequestInMemoryAdapter.new
     @offer_request_repository                   = OfferRequests::OfferRequestRepository.new(offer_request_in_memory_adapter)
     @offer_request_read_model_in_memory_adapter = InMemoryAdapter.new
     @offer_request_read_model_repository        = OfferRequests::ReadModel::OfferRequestReadModelRepository.new(offer_request_read_model_in_memory_adapter)
