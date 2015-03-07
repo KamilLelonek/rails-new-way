@@ -3,7 +3,7 @@ require_relative '../../common/query'
 module Juices
   module Ingredients
     class GetAllIngredients
-      include ::Query
+      include Common::Query
 
       def initialize(repository = IngredientRepository.new)
         super

@@ -3,7 +3,7 @@ require_relative '../../common/repository'
 module Juices
   module Categories
     class CategoryRepository
-      include Repository
+      include Common::Repository
 
       def initialize(adapter = Category)
         super
