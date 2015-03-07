@@ -1,7 +1,10 @@
 require 'json_spec'
 require 'ffaker'
+require 'solid_use_case/rspec_matchers'
 
-Dir['./spec/support/**/*.rb'].sort.each &method(:require)
+%w(shared support).each do |path|
+  Dir["./spec/#{path}/**/*.rb"].sort.each &method(:require)
+end
 
 require_relative 'rails_helper'
 
@@ -13,4 +16,6 @@ RSpec.configure do |config|
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
   end
+
+  config.include SolidUseCase::RSpecMatchers
 end
