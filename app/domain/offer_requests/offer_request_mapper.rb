@@ -3,7 +3,7 @@ module OfferRequests
     def call(record)
       OfferRequestEntity.new(
         id:              record.id,
-        delivery_option: map_delivery_option(record),
+        delivery:        map_delivery(record),
         customer_name:   record.customer_name,
         customer_email:  record.customer_email,
         company_name:    record.company_name,
@@ -13,7 +13,7 @@ module OfferRequests
       )
     end
 
-    def map_delivery_option(record)
+    def map_delivery(record)
       Deliveries::DeliveryMapper.new.(record.delivery)
     end
 
