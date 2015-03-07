@@ -5,7 +5,7 @@ module Juices
         CategoryEntity.new(
           id:          record.id,
           name:        record.name,
-          oz_capacity: record.capacity
+          oz_capacity: record.oz_capacity
         )
       end
     end
