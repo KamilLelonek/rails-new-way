@@ -1,6 +1,7 @@
 require 'json_spec'
 require 'ffaker'
 require 'solid_use_case/rspec_matchers'
+require 'rspec/collection_matchers'
 
 %w(shared support).each do |path|
   Dir["./spec/#{path}/**/*.rb"].sort.each &method(:require)
