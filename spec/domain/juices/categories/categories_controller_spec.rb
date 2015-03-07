@@ -1,25 +1,17 @@
 RSpec.describe Juices::Categories::CategoriesController, type: :controller do
-  let(:app) { AppCreator.new }
-  let(:dummy_records) do
-    10.times.map do
-      Juices::Categories::CategoryEntity.new(
-        id:          SecureRandom.uuid,
-        name:        Faker::Food.fruit.downcase,
-        oz_capacity: rand(1..20)
-      )
-    end
-  end
+  let(:app)   { AppCreator.new   }
+  let(:store) { SharedModels.new }
 
   before do
     expect(controller)
       .to receive(:get_all_categories)
       .and_return(app.get_all_categories)
 
-    app.category_adapter.all = dummy_records
+    app.category_adapter.all = store.categories
   end
 
   it 'renders json with all categories' do
     xhr :get, :index
-    expect(response.body).to be_json_eql dummy_records.to_json
+    expect(response.body).to be_json_eql store.categories.to_json
   end
 end
