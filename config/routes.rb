@@ -10,4 +10,10 @@ Rails.application.routes.draw do
       resources :categories, only: :index
     end
   end
+
+  scope module: :offer_requests do
+    scope module: :deliveries do
+      resources :deliveries, only: :index
+    end
+  end
 end
