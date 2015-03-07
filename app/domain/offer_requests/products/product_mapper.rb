@@ -12,7 +12,7 @@ module OfferRequests
       end
 
       def map_juice_category(record)
-        Juices::Categories::CategoryMapper.new.(record.juice_category)
+        Juices::Categories::CategoryMapper.new.(record.category)
       end
     end
   end
