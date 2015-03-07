@@ -2,7 +2,7 @@ RSpec.describe Juices::Categories::CategoriesController, type: :controller do
   let(:app) { AppCreator.new }
   let(:dummy_records) do
     10.times.map do
-      OpenStruct.new(
+      Juices::Categories::CategoryEntity.new(
         id:          SecureRandom.uuid,
         name:        Faker::Food.fruit.downcase,
         oz_capacity: rand(1..20)
