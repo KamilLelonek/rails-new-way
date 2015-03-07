@@ -14,7 +14,7 @@ class SharedModels
       Juices::Categories::CategoryEntity.new(
         id:          SecureRandom.uuid,
         name:        Faker::Food.fruit.downcase,
-        oz_capacity: rand(1..20)
+        oz_capacity: rand(1..20),
       )
     end
   end
