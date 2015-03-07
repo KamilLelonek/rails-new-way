@@ -6,7 +6,3 @@ default: &default
 development:
   <<: *default
   database: rails_new_way_development
-
-production:
-  <<: *default
-  database: rails_new_way_production
