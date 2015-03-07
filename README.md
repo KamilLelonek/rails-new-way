@@ -49,6 +49,10 @@ Example payload when testing from browser:
           ]
         }
 
-
-
 Remeber to change `category_id` and `delivery_id` according to your current db seeds.
+
+## Demo
+
+Website is available under:
+
+   [https://rails-new-way.herokuapp.com](https://rails-new-way.herokuapp.com)
