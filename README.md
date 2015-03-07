@@ -1,5 +1,7 @@
 # rails-new-way
 
+[ ![Codeship Status for KamilLelonek/rails-new-way](https://codeship.com/projects/0fb01e50-a73c-0132-14d4-2eb3789e9959/status?branch=master)](https://codeship.com/projects/67180)
+
 To see the domain desciprtion check [DOMAIN.md](DOMAIN.md)
 
 ## Setup
