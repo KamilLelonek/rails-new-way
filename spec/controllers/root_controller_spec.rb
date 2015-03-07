@@ -14,15 +14,17 @@ RSpec.describe RootController do
 
   def current_api
     {
-      categories:  "#{request.url}categories",
-      ingredients: "#{request.url}ingredients",
-      deliveries:  "#{request.url}deliveries",
+      categories:     "#{request.url}categories",
+      ingredients:    "#{request.url}ingredients",
+      deliveries:     "#{request.url}deliveries",
+      offer_requests: "#{request.url}offer_requests",
     }.to_json
   end
 
   it 'provides routable paths' do
-    expect(get: '/categories') .to be_routable
-    expect(get: '/ingredients').to be_routable
-    expect(get: '/deliveries') .to be_routable
+    expect(get: '/categories')    .to be_routable
+    expect(get: '/ingredients')   .to be_routable
+    expect(get: '/deliveries')    .to be_routable
+    expect(get: '/offer_requests').to be_routable
   end
 end

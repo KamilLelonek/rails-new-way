@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   end
 
   scope module: :offer_requests do
+    resources :offer_requests, only: :index
+    
     scope module: :deliveries do
       resources :deliveries, only: :index
     end
