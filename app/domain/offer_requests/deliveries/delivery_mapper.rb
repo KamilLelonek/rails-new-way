@@ -4,6 +4,7 @@ module OfferRequests
       def call(record)
         DeliveryEntity.new(
           id:          record.id,
+          name:        record.name,
           description: record.description,
         )
       end
