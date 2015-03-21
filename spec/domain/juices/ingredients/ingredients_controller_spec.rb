@@ -2,7 +2,7 @@ RSpec.describe Juices::Ingredients::IngredientsController, type: :controller do
   let(:app) { AppCreator.new }
   let(:dummy_records) do
     10.times.map do
-      Juices::Ingredients::IngredientValueObject.new(name: Faker::Food.fruit.downcase)
+      Juices::Ingredients::IngredientValueObject.new(name: FFaker::Food.fruit.downcase)
     end
   end
 

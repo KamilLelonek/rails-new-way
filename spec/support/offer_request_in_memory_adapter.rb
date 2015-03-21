@@ -11,8 +11,8 @@ class OfferRequestInMemoryAdapter < InMemoryAdapter
                      delivery_id:     record[:delivery_id],
                      delivery:        OpenStruct.new({
                                                        id:          record[:delivery_id],
-                                                       name:        Faker::Lorem.word,
-                                                       description: Faker::Lorem.paragraph,
+                                                       name:        FFaker::Lorem.word,
+                                                       description: FFaker::Lorem.paragraph,
                                                      }),
                      products:        [
                                         OpenStruct.new({

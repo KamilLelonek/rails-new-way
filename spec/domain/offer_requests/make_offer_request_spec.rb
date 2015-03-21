@@ -9,12 +9,12 @@ RSpec.describe UseCases::MakeOfferRequest do
 
   let(:valid_params) do
     {
-      customer_name:   Faker::Name.name,
-      customer_email:  Faker::Internet.email,
+      customer_name:   FFaker::Name.name,
+      customer_email:  FFaker::Internet.email,
       delivery_id:     store.deliveries.sample.id,
-      company_name:    Faker::Company.name,
-      company_phone:   Faker::PhoneNumber.short_phone_number,
-      company_address: Faker::Address.secondary_address,
+      company_name:    FFaker::Company.name,
+      company_phone:   FFaker::PhoneNumber.short_phone_number,
+      company_address: FFaker::Address.secondary_address,
       products:        [{ category_id: store.categories.sample.id, quantity: 1 }]
     }
   end
